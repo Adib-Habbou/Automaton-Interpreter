@@ -11,8 +11,8 @@ word.dot, word_bis.dot, dyck.dot, arith.dot <br />
 stack.c, matrix.c, automaton.c <br />
 stack.h, matrix.h <br />
 Makefile <br />
-README.MD <br />
-rapport.pdf
+rapport.pdf <br />
+README.MD
 
 
 ## Usage
