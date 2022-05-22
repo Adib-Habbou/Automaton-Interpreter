@@ -11,7 +11,7 @@ word.dot, word_bis.dot, dyck.dot, arith.dot
 stack.c, matrix. c, automaton.c
 stack.h, matrix.h
 Makefile
-readme.txt
+README.MD
 rapport.pdf
 
 
