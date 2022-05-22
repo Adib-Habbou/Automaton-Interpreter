@@ -1,0 +1,38 @@
+// directed graph representing dyck.aut automaton :
+digraph dyck {
+    // definition the special nodes :
+    Accepte [color = white, fontcolor = green]
+    nothing [style = invisible]
+    "(0,e)" [color = white, fontcolor = blue]
+    "(2,s)" [color = white, fontcolor = blue]
+    "(4,e)" [color = white, fontcolor = blue]
+
+    // arc with Q0 as tail and no head :
+    nothing -> Q0
+
+    // all the arcs where Q0 is the head :
+    Q0 -> Q1 [color = red, label = s, fontcolor = red]
+    Q0 -> Q2 [color = red, label = e, fontcolor = red]
+    Q0 -> "(0,e)" [color = blue, label = "'\\n,('", fontcolor = blue]
+
+    // the arc where Q1 is the head :
+    Q1 -> Accepte [color = green, label = "'\\0'", fontcolor = green]
+
+    // all the arcs where Q2 is the head :
+    Q2 -> Q6 [label = "\\n"]
+    Q2 -> Q3 [label = "("]
+
+    // all the arcs where Q3 is the head :
+    Q3 -> "(0,e)" [color = blue, label = "(,)", fontcolor = blue]
+    Q3 -> Q4 [color = red, label = e, fontcolor = red]
+
+    // all the arcs where Q4 is the head :
+    Q4 -> Q3 [label = "("]
+    Q4 -> Q5 [label = ")"]
+
+    // the arc where Q5 is the head :
+    Q5 -> "(4,e)" [color = blue, label = "'\\n',(,)", fontcolor = blue]
+    
+    // the arc where Q6 is the head :
+    Q6 -> "(2,s)" [color = blue, label = "'\\0'", fontcolor = blue]
+}

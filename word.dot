@@ -1,0 +1,27 @@
+// directed graph representing word.aut automaton :
+digraph word {
+    // definition the special nodes :
+    Accepte [color = white, fontcolor = green]
+    nothing [style = invisible]
+    "(0,S)" [color = white, fontcolor = blue]
+    "(2,S)" [color = white, fontcolor = blue]
+
+    // arc with Q0 as tail and no head :
+    nothing -> Q0
+
+    // all the arcs where Q0 is the head :
+    Q0 -> Q1 [label = "a-zA-Z"]
+    Q0 -> Q3 [color = red, label = S, fontcolor = red]
+    Q0 -> "(0,S)" [color = blue, label = "'\\n'", fontcolor = blue]
+
+    // all the arcs where Q1 is the head :
+    Q1 -> Q1 [label = "a-zA-Z"]
+    Q1 -> Q2 [color = red, label = S, fontcolor = red]
+    Q1 -> "(0,S)" [color = blue, label = "'\\n'", fontcolor = blue]
+
+    // the arc where Q2 is the head :
+    Q2 -> "(2,S)" [color = blue, label = "'\\n'", fontcolor = blue]
+    
+    // the arc where Q3 is the head :
+    Q3 -> Accepte [color = green, label = "'\\n'", fontcolor = green]
+}

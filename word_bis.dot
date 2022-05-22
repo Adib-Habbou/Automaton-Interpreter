@@ -1,0 +1,22 @@
+// directed graph representing word_bis.aut automaton :
+digraph word_bis {
+    // definition the special nodes :
+    Accepte [color = white, fontcolor = green]
+    nothing [style = invisible]
+    "(0,S)" [color = white, fontcolor = blue]
+    "(2,S)" [color = white, fontcolor = blue]
+
+    // arc with Q0 as tail and no head :
+    nothing -> Q0
+
+    // all the arcs where Q0 is the head :
+    Q0 -> Q1 [color = red, label = S, fontcolor = red]
+    Q0 -> "(0,S)" [color = blue, label = "'\\n',a-zA-Z", fontcolor = blue]
+
+    // all the arcs where Q1 is the head :
+    Q1 -> Accepte [color = green, label = "'\\n'", fontcolor = green]
+    Q1 -> Q2 [label = "a-zA-Z"]
+    
+    // the arc where Q2 is the head :
+    Q2 -> "(2,S)" [color = blue, label = "'\\n',a-zA-Z", fontcolor = blue]
+}
