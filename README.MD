@@ -7,11 +7,11 @@ The program takes user input and tells if the string is accepted or rejected.
 
 ## Content
 
-word.dot, word_bis.dot, dyck.dot, arith.dot
-stack.c, matrix. c, automaton.c
-stack.h, matrix.h
-Makefile
-README.MD
+word.dot, word_bis.dot, dyck.dot, arith.dot <br />
+stack.c, matrix.c, automaton.c <br />
+stack.h, matrix.h <br />
+Makefile <br />
+README.MD <br />
 rapport.pdf
 
 
